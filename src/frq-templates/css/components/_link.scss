@@ -1,0 +1,16 @@
+.link{
+  display: inline-block !important;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  background-color: $blueColor;
+  color: $whiteColor !important;
+  padding: 4px 8px;
+  &:hover{
+    background-color: $yellowColor;
+    text-decoration: none;
+    color: $blackColor !important;
+  }
+ &--darkBlue{
+   background-color: $darkBlueColor;
+ }
+}

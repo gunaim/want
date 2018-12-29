@@ -1,0 +1,41 @@
+.tab{
+  background-color: $whiteColor;
+  margin-top: -97px;
+  &__title{
+    font-size:2.5rem;
+  }
+  &__subtitle{
+    font-size:1.4rem;
+  }
+  &__list{
+    margin-bottom: 50px !important;
+  }
+  &__icon{
+    margin: 8px 15px;
+    color: $lightBlackColor;
+    font-size: 2.8rem;
+  }
+  .nav-pills .nav-item{
+    border-right: 1px solid $grayBorderColor !important;
+    padding: 0;
+    &:last-child{
+      border-right: none !important;
+    }
+  }
+
+  .nav-pills .nav-link{
+    display: flex;
+    padding:20px;
+    background-color: $grayBackColor;
+    color: $blackColor !important;
+    border-radius: 0 !important;
+    &.active{
+      background-color: $whiteColor !important;
+      color: $blackColor !important;
+      .fa{
+        color: $blueColor !important;
+      }
+    }
+  }
+
+}

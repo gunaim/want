@@ -1,0 +1,159 @@
+.access{
+  background-color: $whiteColor;
+  box-shadow: 3px 0 30px rgba(0,0,0,0.2);
+  width: 400px;
+  padding: 45px;
+  overflow-y: auto;
+ height: 100vh;
+  @include respondmax(md){
+    width: 100%;
+    box-shadow: none;
+  }
+  &__logo{
+    text-align: center;
+    border-bottom: 1px solid $grayBackColor;
+    margin: -45px -45px 30px !important;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respondmax(md){
+      margin-top: -28px !important;
+    }
+  }
+  &__social{
+    display: block;
+    text-decoration: none !important;
+    border-radius: 3px;
+    text-align: center;
+    color: $whiteColor !important;
+    min-width: 200px;
+    margin-bottom: 5px;
+    padding: 12px;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    &:before{
+      font-family: 'FontAwesome';
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      font-size: 1.6rem;
+      color: $whiteColor !important;
+    }
+    &:hover{
+      filter: brightness(115%);
+    }
+    &--facebook{
+      background-color: $fbColor;
+      &:before{
+        content: '\f09a';
+      }
+    }
+    &--google{
+      background-color: $googleColor;
+      &:before{
+        content: '\f0d5';
+      }
+    }
+  }
+  &__divider{
+    position: relative;
+    height: 1px;
+    background-color: #e1e8ed;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  &__title{
+    padding: 5px 10px;
+    background-color: $whiteColor;
+    color: $gray4Color;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+  }
+  &__form{
+    .form-group{
+      position: relative;
+      margin-bottom: 15px;
+      &:before{
+        font-family: FontAwesome;
+        position: absolute;
+        top: 9px;
+        left: 10px;
+        font-size: 1.6rem;
+        color: $darkGrayColor;
+      }
+      &.username:before{
+        content: '\f007';
+      }
+      &.lastname:before{
+        content: '\f007';
+      }
+      &.email:before{
+         content: '\f0e0';
+       }
+      &.password:before{
+        content: '\f13e';
+      }
+      input{
+        color: $lightGrayColor !important;
+        &.form-control{
+          font-size: 1.5rem;
+          border-radius: 3px;
+          border: 1px solid #d2d8dd;
+          padding: 0.8rem 1.2rem .8rem 2.85rem;
+          &:focus{
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+    .form-check-label{
+      margin-left: 6px;
+      color: $gray !important;
+    }
+    .form-check-input{
+     margin-top: .4rem !important;
+    }
+  }
+  &__validation{
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 5px 3px;
+    border-radius: 3px;
+    &--false{
+      background-color: $lightPink;
+      color: $darkPink;
+      border: 1px solid $pink;
+    }
+    &--true{
+      background-color: $lightGreen;
+      color: $darkGreen;
+      border: 1px solid $green;
+    }
+  }
+  &__forgot{
+    float: right;
+    text-decoration: none !important;
+    color: $gray;
+  }
+  &__link{
+    color: $gray;
+    text-align: center;
+    a{
+      text-decoration: none !important;
+    }
+  }
+  &__copy{
+    font-weight: bold;
+    color: $gray;
+    text-align: center;
+  }
+
+}

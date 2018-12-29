@@ -1,0 +1,33 @@
+.personal{
+  padding: 60px 0;
+  &__panel{
+    padding: 25px;
+    background-color: $whiteColor;
+  }
+  &__divider{
+    margin: 15px -25px;
+    background-color: rgba(3,27,78,0.08);
+    height: 1px;
+  }
+  &__account{
+    background-color: $whiteColor;
+    padding: 25px;
+    @include respondmax(md){
+      margin-top: 25px;
+    }
+    p{
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+    }
+    &--fixed{
+      position: fixed;
+    }
+  }
+  &__title{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: $lightBlackColor;
+  }
+
+}

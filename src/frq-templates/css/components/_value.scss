@@ -1,0 +1,16 @@
+.value{
+  color: #fff;
+  max-width: 100%;
+  min-height: 50%;
+  text-align: center !important;
+&__title{
+  font-size: 4rem;
+  @include respondmax(md){
+    font-size: 2rem;
+  }
+}
+&__subtitle{
+  font-size: 2.2rem;
+  @include respondmax(md){
+    font-size: 1.2rem;
+    margi

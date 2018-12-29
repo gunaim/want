@@ -1,0 +1,93 @@
+.review{
+  padding-top: 60px;
+  padding-bottom: 70px;
+  &__list{
+    margin: 0 auto !important;
+  }
+  &__item{
+    margin: 30px 10px;
+    border-radius: 3px !important;
+    max-width: 300px !important;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(3,27,78,0.06);
+
+    @include respondmax(xl){
+        margin: 0 15px;
+        width: 200px !important;
+        height: auto !important;
+    }
+    @include respondmax(lg){
+      margin: 0 5px;
+    }
+  @include respondmax(sm){
+    width: 400px !important;
+    display: block !important;
+    margin: auto !important;
+  }
+  }
+  &__star{
+    overflow: hidden;
+  }
+  &__media{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+    overflow: hidden;
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    @include respondmax(lg){
+        width: 180px !important;
+        height: auto !important;
+    }
+  }
+  &__rating{
+    margin-bottom: 0;
+    i{
+      font-size: 1.6rem;
+      color: $whiteColor;
+      border-radius: 3px;
+      background-color: $greenColor;
+    }
+  }
+  &__amount{
+    font-size: 1.2rem ;
+    color: $lightBlackColor;
+  }
+  &__empty{
+    background-color: $darkGrayColor !important;
+  }
+  &__date{
+    font-size: 1.3rem;
+    color: $lightBlackColor;
+  }
+  .slick-slide {
+    transform: scale(1);
+    opacity: .6;
+    transition: .3s ease-in-out all;
+    @include respondmax(md) {
+      opacity: 1 !important;
+    }
+  }
+  .slick-slide.slick-center {
+    opacity: 1;
+    transform: scale(1.1);
+    .review__item {
+      box-shadow: 0px 0px 20px 0px rgba(3, 27, 78, 0.1);
+    }
+  }
+  .slick-dots li button:before {
+    font-size: 13px;
+    opacity: 1;
+    color: $grayColor;
+  }
+  .slick-dots li.slick-active button:before {
+    color: $blueColor !important;
+  }
+}
