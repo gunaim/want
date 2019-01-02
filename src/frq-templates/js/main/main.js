@@ -41,26 +41,85 @@ $( document ).ready(function() {
         $("html, body").animate({scrollTop: 0}, "slow");
         return false;
     });
+
+    /*modal */
+    $('.price__link.modal-btn').click(function () {
+        $('main,header,footer').toggleClass('blur');
+    });
+
     var f=(function() {
         var $sidebar = $(".personal__account"),
             $window = $(window),
-            $offset = $sidebar.offset(),
-            topPadding = 90;
+            $offset = $sidebar.offset();
+
+        var width = $sidebar.outerWidth();
         console.log(window.innerWidth > 767);
         console.log($window.scrollTop() > $offset.top);
-        if (window.innerWidth > 767) {
+        if (window.innerWidth > 767 && $sidebar.length > 0) {
             $window.on('scroll',function () {
                     if ($window.scrollTop() > $offset.top) {
-                        $sidebar.css("margin-top", ($window.scrollTop() - $offset.top + topPadding) + "px");
+                        $sidebar.css({'position': 'fixed', 'top': 90, 'width': width})
                     }
                     else {
-                        $sidebar.css("margin-top", 0);
+                        $sidebar.css({'position': 'static', 'width': '100%'});
                     }
                 }
             );
         }
     });
     f();
+
+
+
+
+    // var stickyFunc;
+    // (stickyFunc=function() {
+    //     var stickySide = $('.sticky');
+    //     if(stickySide.length > 0) {
+    //
+    //         var posTop = stickySide.offset().top - 10;
+    //         var width = stickySide.outerWidth();
+    //         var height = $('main').outerHeight() - stickySide.outerHeight() + 30;
+    //
+    //         $(window).scroll(function(){
+    //
+    //             if($(this).scrollTop()>=posTop && window.innerWidth>767 && $(this).scrollTop() < height ){
+    //                 stickySide.css({'position' : 'fixed' , 'top' : 10  , 'width' : width})
+    //             }
+    //             else {
+    //                 stickySide.css({'position' : 'static' , 'width' : '100%'})
+    //             }
+    //         });
+    //     }
+
+
+    /*user settings*/
+
+    $('.user__title').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+
+        $({ countNum: $this.text()}).animate({
+                countNum: countTo
+            },
+
+            {
+
+                duration: 3000,
+                easing:'linear',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                }
+
+            });
+
+
+
+    });
 
 
 });

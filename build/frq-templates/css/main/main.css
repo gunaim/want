@@ -160,6 +160,9 @@ body {
   .mb-md-10 {
     margin-bottom: 10px; } }
 
+.mt-30 {
+  margin-top: 30px; }
+
 .my-20 {
   margin-bottom: 20px;
   margin-top: 20px; }
@@ -263,6 +266,10 @@ body {
        -moz-transform: scale(1);
          -o-transform: scale(1);
             transform: scale(1); } }
+
+.blur {
+  -webkit-filter: blur(10px) brightness(90%);
+          filter: blur(10px) brightness(90%); }
 
 @font-face {
   font-family: Roboto-Regular;
@@ -906,7 +913,8 @@ body {
     font-size: 2.2rem; }
     @media (max-width: 767px) {
       .value__subtitle {
-        font-size: 1.2rem; } }
+        font-size: 1.2rem;
+        margin-bottom: 0 !important; } }
 
 .user {
   padding: 60px 0;
@@ -1015,9 +1023,21 @@ body {
 
 .personal {
   padding: 60px 0; }
+  .personal__form .form-group .form-control {
+    padding: 0.975rem .75rem;
+    font-size: 1.4rem; }
+    .personal__form .form-group .form-control:focus {
+      -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+              box-shadow: none; }
+  .personal__upload {
+    max-width: 320px; }
+  .personal__profile textarea {
+    resize: none !important; }
   .personal__panel {
     padding: 25px;
-    background-color: #fff; }
+    background-color: #fff;
+    overflow: hidden; }
   .personal__divider {
     margin: 15px -25px;
     background-color: rgba(3, 27, 78, 0.08);
@@ -1038,6 +1058,9 @@ body {
     font-weight: bolder;
     margin-bottom: 10px;
     color: #222; }
+
+.myModal {
+  z-index: 9999; }
 
 .page__title {
   font-size: 3rem !important;
@@ -1164,6 +1187,9 @@ body {
 
 .about__tab {
   margin-top: 60px; }
+  @media (max-width: 767px) {
+    .about__tab {
+      margin-top: 20px; } }
   .about__tab .nav-link {
     border-left: 2px solid rgba(255, 255, 255, 0.4);
     color: rgba(255, 255, 255, 0.4) !important;
@@ -1179,6 +1205,10 @@ body {
 .about__tabContent {
   color: #fff;
   font-size: 1.8rem; }
+  @media (max-width: 767px) {
+    .about__tabContent {
+      margin-top: 20px;
+      font-size: 1.4rem; } }
 
 .settings {
   margin-top: 60px;

@@ -13,4 +13,7 @@
   font-size: 2.2rem;
   @include respondmax(md){
     font-size: 1.2rem;
-    margi
+    margin-bottom: 0 !important;
+  }
+}
+}

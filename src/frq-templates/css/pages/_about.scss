@@ -49,4 +49,12 @@
 
     }
   }
-  &__tabCon
+  &__tabContent{
+    color: $whiteColor;
+    font-size: 1.8rem;
+    @include respondmax(md){
+      margin-top: 20px;
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,8 +1,26 @@
 .personal{
   padding: 60px 0;
+  &__form{
+    .form-group{
+      .form-control{
+        padding: 0.975rem .75rem;
+        font-size: 1.4rem;
+        &:focus{
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  &__upload{
+    max-width: 320px;
+  }
+  &__profile textarea{
+    resize: none !important;
+  }
   &__panel{
     padding: 25px;
     background-color: $whiteColor;
+    overflow: hidden;
   }
   &__divider{
     margin: 15px -25px;
@@ -29,5 +47,6 @@
     margin-bottom: 10px;
     color: $lightBlackColor;
   }
+
 
 }
