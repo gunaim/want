@@ -721,6 +721,7 @@ body {
   width: 400px;
   padding: 45px;
   overflow-y: auto;
+  overflow-x: hidden;
   height: 100vh; }
   @media (max-width: 767px) {
     .access {
@@ -862,7 +863,8 @@ body {
   .access__forgot {
     float: right;
     text-decoration: none !important;
-    color: #999; }
+    color: #999;
+    font-size: 1.6rem; }
   .access__link {
     color: #999;
     text-align: center; }
@@ -1095,6 +1097,38 @@ body {
     font-size: 2rem; }
     .myModal .close:focus {
       outline: 0; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  z-index: 9999;
+  opacity: 1 !important; }
+  .tooltip__text {
+    font-size: 1.2rem;
+    width: 120px;
+    display: none;
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%; }
+    .tooltip__text::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #999 transparent transparent; }
+  .tooltip:hover .tooltip__text {
+    display: block; }
 
 .page__title {
   font-size: 3rem !important;
@@ -1363,7 +1397,7 @@ body {
   .menu__nav {
     position: absolute;
     width: 100%;
-    padding: 8px 35px; }
+    padding: 6px 35px; }
     @media (max-width: 991px) {
       .menu__nav {
         display: -webkit-box;
@@ -1416,6 +1450,19 @@ body {
     border-bottom: 1px solid #ededed; }
   .menu__active {
     color: #000 !important; }
+  .menu__loginMedia {
+    display: inline-block;
+    width: 40px;
+    height: 40px; }
+  .menu__loginImg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    display: block !important; }
 
 /*! Gunay Memmedli  25 Oktyabr 2018  https://github.com/GunaySeyidahmed/ */
 /* ==========================================================================

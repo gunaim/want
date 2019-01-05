@@ -1,4 +1,6 @@
 //= template/head.html
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="frq-templates/libs/jquery/dist/jquery.min.js"><\/script>')</script>
 <main class="login">
     <aside class="access">
         <figure class="access__logo">
@@ -24,7 +26,13 @@
                     <label class="form-check-label" for="inlineFormCheck">
                         Remember me
                     </label>
-                    <a href="#" class="access__forgot">Forgot Password</a>
+                    <!--<a href="#" class="access__forgot tooltip">Forgot Password-->
+                        <!--<span class="tooltip__text">Tooltip text content</span>-->
+                    <!--</a>-->
+                    <a href="#" class="access__forgot" data-toggle="tooltip" data-placement="right" title="bootstrap Tooltip text content">
+                        Forgot Password
+
+                    </a>
                 </div>
                 <button type="submit" class="btn myBtn">Login to Vanno</button>
                 <p class="access__link">New to Vanno? <strong><a href="#">Sign up!</a></strong></p>
@@ -33,4 +41,11 @@
         </div>
     </aside>
 </main>
+<script>
+    /*tooltip*/
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 //= template/foot.html

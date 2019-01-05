@@ -4,7 +4,8 @@
   width: 400px;
   padding: 45px;
   overflow-y: auto;
- height: 100vh;
+  overflow-x: hidden;
+  height: 100vh;
   @include respondmax(md){
     width: 100%;
     box-shadow: none;
@@ -139,10 +140,11 @@
     }
   }
   &__forgot{
-    float: right;
-    text-decoration: none !important;
-    color: $gray;
-  }
+     float: right;
+     text-decoration: none !important;
+     color: $gray;
+    font-size: 1.6rem;
+}
   &__link{
     color: $gray;
     text-align: center;

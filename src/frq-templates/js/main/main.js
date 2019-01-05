@@ -1,5 +1,8 @@
 $( document ).ready(function() {
 
+
+
+
     /*responsive menu*/
 
     $('button.navbar-toggler').click(function () {
@@ -128,5 +131,7 @@ $( document ).ready(function() {
 
 
     });
+
+
 
 });
