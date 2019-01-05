@@ -1,3 +1,28 @@
 .myModal{
-  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1060 !important;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  .modal-dialog{
+    max-width: 360px;
+    padding: 22px;
+  }
+  .modal-header{
+    //align-items: center !important;
+  }
+  .modal-title{
+    font-size: 2rem;
+  }
+  .close{
+    font-size: 2rem;
+    //margin: 0 !important;
+    &:focus{
+      outline: 0;
+    }
+  }
 }

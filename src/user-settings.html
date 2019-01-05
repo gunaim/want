@@ -1,5 +1,25 @@
 //= template/head.html
 //= template/header1.html
+<div>
+    <div class="modal fade myModal" id="Note" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close material-icons" data-dismiss="modal" aria-label="Close">close</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores eaque incidunt itaque minus modi, quidem recusandae sapiente sequi temporibus? Cum, eos facere. Fugit, nobis sapiente. Aliquid iusto maxime molestiae quibusdam quo sunt? A aliquid modi molestiae non, omnis placeat provident tempore! Ea magni minus nesciunt quasi quis tempora velit. Ex placeat quidem temporibus voluptatem.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Gonder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <main class="settings">
     <section class="user">
         <div class="container">
@@ -55,8 +75,8 @@
                                     <textarea class="form-control" id="profilTextarea" rows="3" placeholder="Your profile"></textarea>
                                 </div>
                                 <div class="form-group personal__upload">
-                                    <label>Edit Photo</label>
-                                    <input type="file" class="form-control-file">
+                                    <label class="d-block">Edit Photo</label>
+                                    <span class="btn btn-file"><i class="fa fa-camera"></i> Choose file<input type="file" class="form-control-file file-upload"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail">Edit Email</label>
@@ -106,7 +126,7 @@
                         <p>At nec senserit aliquando intellegat, et graece facilisis pro. Per in ridens sensibus interesset, eos ei nonumes incorrupte, iriure diceret an eos.
 
                             Delete account</p>
-                        <a href="#" class="link">Delete account</a>
+                        <a href="#" class="link modal-btn" data-toggle="modal" data-target="#Note">Delete account</a>
                     </div>
                 </div>
             </div>

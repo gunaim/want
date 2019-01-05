@@ -43,9 +43,20 @@ $( document ).ready(function() {
     });
 
     /*modal */
-    $('.price__link.modal-btn').click(function () {
-        $('main,header,footer').toggleClass('blur');
+    $(document).on("click", ".modal-btn", function () {
+        $('main,header,footer').addClass('blur');
     });
+
+    var modalClose= function modalClose() {
+        $('main,header,footer').removeClass('blur');
+
+    };
+
+    $(document).on("click", ".close",function () {
+        modalClose();
+    });
+
+
 
     var f=(function() {
         var $sidebar = $(".personal__account"),
@@ -68,9 +79,7 @@ $( document ).ready(function() {
         }
     });
     f();
-
-
-
+    $( window ).resize(f());
 
     // var stickyFunc;
     // (stickyFunc=function() {
@@ -91,7 +100,6 @@ $( document ).ready(function() {
     //             }
     //         });
     //     }
-
 
     /*user settings*/
 
@@ -120,6 +128,5 @@ $( document ).ready(function() {
 
 
     });
-
 
 });
