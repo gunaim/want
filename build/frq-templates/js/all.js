@@ -104,6 +104,29 @@ $( document ).ready(function() {
     //         });
     //     }
 
+    var f1=(function() {
+        var $sidebar = $(".question__side"),
+            $window = $(window),
+            $offset = $sidebar.offset();
+
+        var width = $sidebar.outerWidth();
+        console.log(window.innerWidth > 767);
+        console.log($window.scrollTop() > $offset.top);
+        if (window.innerWidth > 767 && $sidebar.length > 0) {
+            $window.on('scroll',function () {
+                    if ($window.scrollTop() > $offset.top) {
+                        $sidebar.css({'position': 'fixed', 'top': 90, 'width': width})
+                    }
+                    else {
+                        $sidebar.css({'position': 'static', 'width': '100%'});
+                    }
+                }
+            );
+        }
+    });
+    f1();
+    $( window ).resize(f1());
+
     /*user settings*/
 
     $('.user__title').each(function() {

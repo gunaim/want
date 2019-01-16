@@ -1130,6 +1130,10 @@ body {
   .tooltip:hover .tooltip__text {
     display: block; }
 
+.question {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
 .page__title {
   font-size: 3rem !important;
   color: #222; }
@@ -1281,6 +1285,25 @@ body {
 .settings {
   margin-top: 60px;
   background-color: #EEF3F7; }
+
+.faq__question {
+  padding: 5px;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  line-height: 40px;
+  text-align: center; }
+  .faq__question .fa {
+    font-size: 3rem; }
 
 .footer {
   padding-top: 60px;
